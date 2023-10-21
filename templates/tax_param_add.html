@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Добавление объекта налогообложения</title>
+ </head>
+ <body>
+
+ <form method="post" action="/v1/tax-param/add">
+<fieldset>
+ <legend>Добавление объекта налогообложения</legend>
+<p><label>Номер объекта <input type="number" name = "id" required></label></p>
+ <p><label>Номер региона <input type="number" name = "city_id" required></label></p>
+ <p><label>С какого количества ЛС действует объект налогообложения <input type="number"  name = "from_hp_car" required></label></p>
+ <p><label>До какого количества лошадиных сил действует объект налогообложения <input type="number" name = "to_hp_car" required></label></p>
+ <p><label>C какого года производства автомобиля действует объект налогообложения <input type="number" name = "from_production_year_car" required></label></p>
+ <p><label>До какого года производства автомобиля действует объект налогообложения <input type="number" name = "to_production_year_car" required></label></p>
+ <p><label>Налоговая ставка <input type="number" name = "rate" required></label></p>
+
+</fieldset>
+  <p>  </p>
+     <button type="submit">Отправить</button>
+ </form>
+
+ {% if res %}
+ <p> {{ res }}</p>
+ {% endif %}
+
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Подсчет налога</title>
+ </head>
+ <body>
+
+ <form method="post" action="/v1/car/tax/calc">
+<fieldset>
+ <legend>Подсчет налога</legend>
+ <p><label>Номер региона <input type="number" name = "city_id" required></label></p>
+<p><label>Лошадиные силы <input type="number" name = "hp" required></label></p>
+<p><label>Год <input type="number" name = "year" required></label></p>
+ <p>  </p>
+</fieldset>
+     <button type="submit">Отправить</button>
+ </form>
+  <p>  </p>
+
+ {% if res %}
+ <p> {{ res }}</p>
+ {% endif %}
+
+ </body>
+</html>

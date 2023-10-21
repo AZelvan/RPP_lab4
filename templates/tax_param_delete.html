@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Удаление объекта налогообложения</title>
+ </head>
+ <body>
+
+ <form method="post" action="/v1/tax-param/delete">
+<fieldset>
+ <legend>Удаление объекта налогообложения</legend>
+<p><label>Номер объекта <input type="number" name = "id" required></label></p>
+
+</fieldset>
+  <p>  </p>
+     <button type="submit">Отправить</button>
+ </form>
+
+ {% if res %}
+ <p> {{ res }}</p>
+ {% endif %}
+
+ </body>
+</html>
